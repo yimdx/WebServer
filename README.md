@@ -1,3 +1,34 @@
+# WebServer
+
+
+A lightweight, modular web server built in **C++** for learning and experimentation. This project is designed to deepen understanding of networking, HTTP protocols, and server design, while allowing future extensions in **Python** or **Go**.
+
+## 🚀 Features
+
+- HTTP 1.1 compliant server
+- Basic routing (GET, POST)
+- Static file serving
+- Minimal dependency usage
+- Extensible architecture
+
+## 📦 Tech Stack
+
+- **Language:** C++
+- **Libraries:** Asio / Boost.Beast / cpp-httplib / custom socket handling
+- **Optional (Future):** Python (Flask), Go (Gin/Fiber)
+
+## 📁 Project Structure
+
+```
+--buffer
+--thread pool
+--http
+--webserver
+```
+
+
+
+
 This is an example project using CMake.
 
 The requirements are:
