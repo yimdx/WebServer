@@ -14,6 +14,8 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   # Optionally set things like CMAKE_CXX_STANDARD, CMAKE_POSITION_INDEPENDENT_CODE here
 
   # Let's ensure -std=c++xx instead of -std=g++xx
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
   set(CMAKE_CXX_EXTENSIONS OFF)
 
   # Let's nicely support folders in IDEs
@@ -50,7 +52,7 @@ find_package(Boost REQUIRED)
 FetchContent_Declare(
   fmtlib
   GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-  GIT_TAG 5.3.0)
+  GIT_TAG 10.2.1)
 FetchContent_MakeAvailable(fmtlib)
 # Adds fmt::fmt
 
