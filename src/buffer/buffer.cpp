@@ -2,11 +2,6 @@
 
 namespace webs{
 
-Buffer::Buffer(size_t init_size = 2048)
-    :_buffer(init_size)
-{
-}
-
 size_t Buffer::readable(){
     return _write_pos - _read_pos;
 }

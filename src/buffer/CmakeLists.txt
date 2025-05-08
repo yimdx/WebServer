@@ -1,0 +1,17 @@
+set(HEADER_LIST "${ModernCMakeExample_SOURCE_DIR}/include/modern/lib.hpp")
+set (Buffer "Buffer")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+add_library(${Buffer})
+    target_include_directories(
+        ${Buffer}
+    PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+    )
+    target_sources(
+        ${Buffer}
+    PRIVATE
+        buffer.cpp
+    )

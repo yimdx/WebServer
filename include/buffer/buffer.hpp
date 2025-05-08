@@ -12,7 +12,10 @@ namespace webs{
 class Buffer
 {
 public:
-    Buffer(size_t init_size = 2048);
+    Buffer(size_t init_size = 2048)
+        :_buffer(init_size), _read_pos(0), _write_pos(0)
+    {
+    };
     ~Buffer() = default;
 
     void append(const char* data, size_t len);
