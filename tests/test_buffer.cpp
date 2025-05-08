@@ -39,5 +39,17 @@ TEST_CASE( "Buffer construction and deconstrucion", "[Buffer]" ) {
         auto str = std::string(data);
         buffer.retrieve(9);
         REQUIRE(buffer.readable() == 0);
+        REQUIRE(buffer.writable() == 1024);
+    }
+
+    SECTION("Buffer partial retrieve"){
+        webs::Buffer buffer(1024);
+        
+        buffer.append("test data", 9);
+        auto data = buffer.peek();
+        auto str = std::string(data);
+        buffer.retrieve(4);
+        REQUIRE(buffer.readable() == 5);
+        REQUIRE(buffer.writable() == 1024-9);
     }
 }

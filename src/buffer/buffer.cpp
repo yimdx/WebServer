@@ -15,6 +15,7 @@ void Buffer::append(const char* data, size_t len){
         ensure_writable(len);
     }
     std::copy(data, data+len, begin()+_write_pos);
+    _write_pos+=len;
 }
 
 void Buffer::retrieve(size_t len){
